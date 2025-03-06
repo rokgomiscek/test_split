@@ -1,7 +1,8 @@
 name: Split notebooks by language
-on: push:
-    paths:
-      - '**.ipynb'
+on: 
+    push:
+        paths:
+          - '**.ipynb'
 jobs:
   build:
     permissions:
