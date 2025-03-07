@@ -17,8 +17,8 @@ jobs:
         - name: Install jupyter and convert
           run: |
             python -m pip install jupyter
-            jupyter nbconvert notebooks/*.ipynb --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags sl --to notebook --output-dir='./notebooks/eng'
-            jupyter nbconvert notebooks/*.ipynb --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags en --to notebook --output-dir='./notebooks/slo' 
+            jupyter nbconvert notebooks/src/*.ipynb --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags sl --to notebook --output-dir='./notebooks/eng'
+            jupyter nbconvert notebooks/src/*.ipynb --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags en --to notebook --output-dir='./notebooks/slo' 
         - name: Commit
           run: |
             git config user.name "github-actions[bot]"
